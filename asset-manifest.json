@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.b100e6da.chunk.css",
-    "main.js": "/static/js/main.c6307e4e.chunk.js",
-    "main.js.map": "/static/js/main.c6307e4e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8158aae3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8158aae3.js.map",
-    "static/js/2.1dab2397.chunk.js": "/static/js/2.1dab2397.chunk.js",
-    "static/js/2.1dab2397.chunk.js.map": "/static/js/2.1dab2397.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.eaed8412b82a8694631402232aa4ec7f.js": "/precache-manifest.eaed8412b82a8694631402232aa4ec7f.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.b100e6da.chunk.css.map": "/static/css/main.b100e6da.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.25bf045c.svg"
+    "main.css": "/gifting2019/static/css/main.b100e6da.chunk.css",
+    "main.js": "/gifting2019/static/js/main.24e0af83.chunk.js",
+    "main.js.map": "/gifting2019/static/js/main.24e0af83.chunk.js.map",
+    "runtime-main.js": "/gifting2019/static/js/runtime-main.6afdebb9.js",
+    "runtime-main.js.map": "/gifting2019/static/js/runtime-main.6afdebb9.js.map",
+    "static/js/2.aaa4ddf1.chunk.js": "/gifting2019/static/js/2.aaa4ddf1.chunk.js",
+    "static/js/2.aaa4ddf1.chunk.js.map": "/gifting2019/static/js/2.aaa4ddf1.chunk.js.map",
+    "index.html": "/gifting2019/index.html",
+    "precache-manifest.97e913aef599893d2f90466d7d08fede.js": "/gifting2019/precache-manifest.97e913aef599893d2f90466d7d08fede.js",
+    "service-worker.js": "/gifting2019/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/gifting2019/static/css/main.b100e6da.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.8158aae3.js",
-    "static/js/2.1dab2397.chunk.js",
+    "static/js/runtime-main.6afdebb9.js",
+    "static/js/2.aaa4ddf1.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.c6307e4e.chunk.js"
+    "static/js/main.24e0af83.chunk.js"
   ]
 }
