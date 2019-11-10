@@ -1,40 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import generate from './generate';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Generate from './generate'
+import Decode from './decode/decode'
 
 function App() {
-  const people = [
-    "Benjamin  ",
-    "Douglas   ",
-    "Lauretta  ",
-    "Annie     ",
-    "Kathryn   ",
-    "Michael   ",
-    "Steven    ",
-    "Leah      "
-  ]
-  const matched: Array<string> = generate(people)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <ul>          
-          {matched.map(match => <li>{match}</li>)}
+    <Router>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/generate">Generate</Link>
+          </li>
+         
         </ul>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn reactjs
+      </nav>
 
-        </a>
-      </header>
+      <Switch>
+        <Route path="/generate">
+          <Generate />
+        </Route>
+        <Route path="/">
+          <Decode />
+        </Route>
+      </Switch>
     </div>
-  );
+  </Router>
+  )
 }
 
 export default App;
