@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/gifting2019/static/css/main.b27897e0.chunk.css",
-    "main.js": "/gifting2019/static/js/main.0786e6ee.chunk.js",
-    "main.js.map": "/gifting2019/static/js/main.0786e6ee.chunk.js.map",
+    "main.js": "/gifting2019/static/js/main.def58f34.chunk.js",
+    "main.js.map": "/gifting2019/static/js/main.def58f34.chunk.js.map",
     "runtime-main.js": "/gifting2019/static/js/runtime-main.6afdebb9.js",
     "runtime-main.js.map": "/gifting2019/static/js/runtime-main.6afdebb9.js.map",
     "static/js/2.0b68ed21.chunk.js": "/gifting2019/static/js/2.0b68ed21.chunk.js",
     "static/js/2.0b68ed21.chunk.js.map": "/gifting2019/static/js/2.0b68ed21.chunk.js.map",
     "index.html": "/gifting2019/index.html",
-    "precache-manifest.81923e2ffe782b7a6d0867e40bf9d4ef.js": "/gifting2019/precache-manifest.81923e2ffe782b7a6d0867e40bf9d4ef.js",
+    "precache-manifest.ac9c8b627d0eb7b6c1b380b8e4f85740.js": "/gifting2019/precache-manifest.ac9c8b627d0eb7b6c1b380b8e4f85740.js",
     "service-worker.js": "/gifting2019/service-worker.js",
     "static/css/main.b27897e0.chunk.css.map": "/gifting2019/static/css/main.b27897e0.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.6afdebb9.js",
     "static/js/2.0b68ed21.chunk.js",
     "static/css/main.b27897e0.chunk.css",
-    "static/js/main.0786e6ee.chunk.js"
+    "static/js/main.def58f34.chunk.js"
   ]
 }
