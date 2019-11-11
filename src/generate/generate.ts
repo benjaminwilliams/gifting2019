@@ -2,7 +2,7 @@ import { encrypt } from "../utils/encrypt"
 
 interface Pairing {
   person: string,
-  values: Array<string>
+  values: Array<string | undefined>
 }
 
 interface FormatedPairing { 
@@ -22,16 +22,26 @@ function generate(people: Array<string>, doEncode: boolean): Array<FormatedPairi
   }
 
   function calculateMatch (people: Array<string>): string {
+    
     const randomPosition = Math.floor(Math.random() * people.length)
     return people[randomPosition]
   }
 
-  function calculateMatches (list1: Array<string>, list2: Array<string>): Array<string> {
+  function calculateMatches (list1: Array<string>, list2: Array<string>): Array<string | undefined> {
+    let matches
     
-    const match1 = calculateMatch(list1)
-    const match2 = calculateMatch(list2)
-    return [match1, match2]
+    function generate() {
+      
+      const match1 = calculateMatch(list1)
+      const match2 = calculateMatch(list2)
+
+      return [match1, match2]
+    }
+    
+    do { matches = generate() } 
+    while (matches[0] === matches[1] && (list1.length !== 1) )
    
+    return matches
   }
 
   function encryptMatches (matches: Array<FormatedPairing>, key: string): Array<FormatedPairing> {
@@ -57,6 +67,7 @@ function generate(people: Array<string>, doEncode: boolean): Array<FormatedPairi
 
   function isValidResult (matches: Array<Pairing>): boolean {
     const hasInvalid = matches.find(match => {
+      console.log('values', match.values[0], match.values[1])
       return match.values[0] === undefined || match.values[1] === undefined
     })
     console.log('hasInvalid', hasInvalid)
@@ -70,7 +81,7 @@ function generate(people: Array<string>, doEncode: boolean): Array<FormatedPairi
     for (const person of people){
       const group1 = removeCurrentPerson(person, list1)
       const group2 = removeCurrentPerson(person, list2)
-      const matches: Array<string> = calculateMatches(group1, group2)
+      const matches: Array<string | undefined> = calculateMatches(group1, group2)
       list1.splice(list1.findIndex(p => p === matches[0]), 1)
       list2.splice(list2.findIndex(p => p === matches[1]), 1)
       output.push({person, values: matches})
@@ -85,7 +96,6 @@ function generate(people: Array<string>, doEncode: boolean): Array<FormatedPairi
     do {
       matches = match(people)
       hasValidResult = isValidResult(matches)
-      console.log('matching', hasValidResult)
     }
     while (hasValidResult === true)
     
@@ -94,8 +104,6 @@ function generate(people: Array<string>, doEncode: boolean): Array<FormatedPairi
 
   const formatedMatches = getValidMatch(people)
 
-  console.log('hi', doEncode)
-  
   return doEncode ? encryptMatches(formatedMatches, 'test') : formatedMatches 
 
 }

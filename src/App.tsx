@@ -12,9 +12,9 @@ import Decode from './decode/decode'
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
     <div>
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -24,15 +24,15 @@ function App() {
           </li>
          
         </ul>
-      </nav>
+      </nav> */}
 
       <Switch>
-        <Route path="/generate">
+        <Route path={"/generate"}>
           <Generate />
         </Route>
-        <Route path="/">
-          <Decode />
-        </Route>
+        <Route path={"/code/:code"} component={Decode} /> 
+        <Route path="/" component={Decode} /> 
+        
       </Switch>
     </div>
   </Router>
