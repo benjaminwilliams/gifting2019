@@ -1,3 +1,4 @@
+import { KEY } from "../utils/constants"
 import { encrypt } from "../utils/encrypt"
 
 interface Pairing {
@@ -104,7 +105,7 @@ function generate(people: Array<string>, doEncode: boolean): Array<FormatedPairi
 
   const formatedMatches = getValidMatch(people)
 
-  return doEncode ? encryptMatches(formatedMatches, 'test') : formatedMatches 
+  return doEncode ? encryptMatches(formatedMatches, KEY) : formatedMatches 
 
 }
 

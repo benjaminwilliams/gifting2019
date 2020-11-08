@@ -14,25 +14,11 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
     <div>
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/generate">Generate</Link>
-          </li>
-         
-        </ul>
-      </nav> */}
-
       <Switch>
-        <Route path={"/generate"}>
-          <Generate />
-        </Route>
+      
+        <Route path={"/generate/:debug"} component={Generate} />
         <Route path={"/code/:code"} component={Decode} /> 
         <Route path="/" component={Decode} /> 
-        
       </Switch>
     </div>
   </Router>

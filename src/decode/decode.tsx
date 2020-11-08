@@ -1,5 +1,6 @@
 import React from 'react';
 import { decrypt } from '../utils/encrypt'
+import { KEY } from '../utils/constants'
 
 function Decode(props: any) {
   
@@ -9,8 +10,8 @@ function Decode(props: any) {
   
 
   console.log(props.match)
-  function decode() {
-    const newValue = decrypt(code,'test')
+  const decode = () => {
+    const newValue = decrypt(code, KEY)
     setValue(newValue === "" ? "error" : newValue)
   }
 
@@ -20,7 +21,7 @@ function Decode(props: any) {
 
   return (
    <div className="App-header">
-     <h1>Super Sneeky Santa</h1>
+     <h1>Williams Family Secret Santa</h1>
      {code.length === 0 && 
      <>
       <input value={code} onChange={e => setCode(e.target.value)} style={{padding: '20px', fontSize: '30px'}} />
