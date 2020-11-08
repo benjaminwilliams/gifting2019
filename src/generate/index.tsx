@@ -14,7 +14,7 @@ function Generate(props:any){
       <header className="App-header">
         <ul>          
           {matched.map((match, index) => {
-            return (<li key={`match${index}`}>{match.person} gets {match.values} </li>)
+            return (<li key={`match${index}`}><a href={`https://benjaminwilliams.github.io/gifting2019/code/${match.values}`}>{match.person}</a> gets {match.values} </li>)
           })}
         </ul>
       </header>
