@@ -21,7 +21,7 @@ function Decode(props: any) {
 
   return (
    <div className="App-header">
-     <h1>Williams Family Secret Santa</h1>
+     <h1>Williams Family Secret Santa 2020</h1>
      {code.length === 0 && 
      <>
       <input value={code} onChange={e => setCode(e.target.value)} style={{padding: '20px', fontSize: '30px'}} />
